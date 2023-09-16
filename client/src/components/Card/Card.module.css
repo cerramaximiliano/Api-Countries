@@ -1,0 +1,23 @@
+.card {
+    margin-bottom: 10px; /* Espacio entre elementos */
+    padding: 10px; /* Agrega espacio de separación entre elementos */
+    border: 1px solid #000;
+    width: 200px;
+    height: 300px;
+    border-radius: 5%;
+
+}
+.cardElements{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    height: 100%;
+    justify-content: center;
+}
+.cardChildElements{
+    width: 100%;
+}
+.cardImage {
+    width: 120px;
+    height: 75px;
+}

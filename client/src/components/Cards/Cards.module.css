@@ -1,0 +1,12 @@
+
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan en filas */
+    justify-content: space-between; /* Espaciado entre elementos */
+    padding: 20px; /* Espaciado alrededor del contenedor */
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+}
+
