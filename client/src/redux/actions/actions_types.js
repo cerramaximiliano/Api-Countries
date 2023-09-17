@@ -1,3 +1,8 @@
 export const ADD_COUNTRIES = 'ADD_COUNTRIES';
+export const ADD_COUNTRIES_BY_NAME = 'ADD_COUNTRIES_BY_NAME';
 export const FILTER = 'FILTER';
+export const FILTER_BY_CONTINENT = "FILTER_BY_CONTINENT";
 export const ORDER = 'ORDER';
+export const ORDER_POPULATION = 'ORDER_POPULATION';
+export const ADD_ACTIVITIES = 'ADD_ACTIVITIES';
+export const RESET_FILTER = 'RESET_FILTER';

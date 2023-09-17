@@ -5,7 +5,7 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .card {
@@ -14,4 +14,12 @@
 
 .read-the-docs {
   color: #888;
+}
+.imageItem {
+  height: 1em;
+}
+
+.footer {
+  margin-top: 20px;
+  margin-bottom: 15px;
 }

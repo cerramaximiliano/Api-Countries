@@ -26,26 +26,14 @@ module.exports = (sequelize) => {
         difficulty: {
             type: DataTypes.INTEGER,
             allowNull: false,
-            // validate: {
-            //     min: {
-            //         args: 1,
-            //         msg: "The minimun allowed value for 'Difficulty' is 1."
-            //     },
-            //     max: {
-            //         args: 5,
-            //         msg: "The maximun allowed value for 'Difficulty' is 5"
-            //     },
-            // }
+            validate: {
+                min: 1,
+                max: 5,
+              },
         },
         duration: {
             type: DataTypes.INTEGER,
-            allowNull: false,
-            // validate: {
-            //     min: {
-            //         args: 1,
-            //         msg: "The minimun allowed value for 'Duration'is 1"
-            //     }
-            // }
+            allowNull: true,
         },
         season: {
             type: DataTypes.ENUM("Spring", "Autumn", "Winter", "Summer"),

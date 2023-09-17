@@ -5,7 +5,7 @@ import styles from './Cards.module.css'
 import Card from '../Card/Card';
 
 
-const Cards = ( {countries} ) => {
+export function Cards ( {countries} )  {
     const dispatch = useDispatch();
     const [currentPage, setCurrentPage] = useState(1);
     useEffect(() => {
@@ -21,7 +21,8 @@ const Cards = ( {countries} ) => {
         <div>
             <div className={styles.container}>
             {
-            filteredCountries.map((country) =>  (
+            (filteredCountries || filteredCountries.length > 0) 
+            ?   filteredCountries.map((country) =>  (
                 <Card key={country.id} 
                 id={country.id} 
                 name={country.name} 
@@ -29,6 +30,9 @@ const Cards = ( {countries} ) => {
                 image={country.flag} 
                 />
             ))
+            : (
+                <div className={styles.message}><h3>No se han encontrado resultados</h3></div>
+            )
             }
             </div>
 
@@ -39,32 +43,11 @@ const Cards = ( {countries} ) => {
         </div>
     )
 }
-
-
 export function mapStateToProps(state){
     return {
-        countries: state.countries,
+        countries: state.allCountries,
      }
 };
 
 export default connect (mapStateToProps)(Cards);
 
-
-
-
-
-    // const URL_BASE = `http://localhost:3001/`;
-    // const [countriesList, setCountriesList] = useState([]);
-    // const countries =  () => {
-    //     axios(`${URL_BASE}countries`)
-    //      .then(({data}) => { 
-    //         setCountriesList(data)
-    //      })
-    //      .catch((err) => {
-    //        return err
-    //      })
-    //    };
-
-    // useEffect(() => {
-    //     countries()
-    // }, []);

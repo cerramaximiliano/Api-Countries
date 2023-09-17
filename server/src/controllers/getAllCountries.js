@@ -1,10 +1,18 @@
-const { Country } = require('../db');
+const { Country, Activity } = require('../db');
 const { fillDB } = require('../utils/utils');
 
 module.exports = async () => {
     try {
         const createCountries = await fillDB();
-        const findAllCountries = await Country.findAll({raw:true});
+        const findAllCountries = await Country.findAll( 
+            {include: {
+                model: Activity,
+                attributes: ["name"],
+                through: {
+                    attributes: [],
+                }
+            }}
+            );
         return findAllCountries
     }catch (err) {
         console.log(err);

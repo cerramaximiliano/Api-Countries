@@ -1,4 +1,3 @@
-
 .container {
     display: flex;
     flex-wrap: wrap; /* Permitir que los elementos se envuelvan en filas */
@@ -9,4 +8,6 @@
     display: flex;
     justify-content: center;
 }
-
+.message {
+    margin: auto
+}
