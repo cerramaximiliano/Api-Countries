@@ -54,7 +54,9 @@ export function Nav ( {activities} ) {
 
                 <select name="activity" defaultValue={"0"} onChange={handleFilter} >
                     <option value="0" disabled={true} >Find By Activity</option>
-                    {activities.map((activity) => (
+                    {
+                    activities &&
+                    activities.map((activity) => (
                         <option value={activity.name} key={activity.id}>{activity.name}</option>
                     ))
                     }

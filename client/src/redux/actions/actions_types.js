@@ -6,3 +6,4 @@ export const ORDER = 'ORDER';
 export const ORDER_POPULATION = 'ORDER_POPULATION';
 export const ADD_ACTIVITIES = 'ADD_ACTIVITIES';
 export const RESET_FILTER = 'RESET_FILTER';
+export const CREATE_ACTIVITIES = "CREATE_ACTIVITIES";

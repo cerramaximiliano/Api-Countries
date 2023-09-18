@@ -1,4 +1,4 @@
-import { ADD_ACTIVITIES, ADD_COUNTRIES, ADD_COUNTRIES_BY_NAME, FILTER, FILTER_BY_CONTINENT, ORDER, ORDER_POPULATION, RESET_FILTER } from "./actions/actions_types";
+import { ADD_ACTIVITIES, ADD_COUNTRIES, ADD_COUNTRIES_BY_NAME, FILTER, FILTER_BY_CONTINENT, ORDER, ORDER_POPULATION, RESET_FILTER, CREATE_ACTIVITIES} from "./actions/actions_types";
 
 const initialState = {
     countries: [],
@@ -63,6 +63,11 @@ function reducer ( state = initialState, action ){
             return {
                 ...state,
                 activities: action.payload
+            }
+        case CREATE_ACTIVITIES :
+            return {
+                ...state,
+                activities: [...state.activities, action.payload]
             }
         case RESET_FILTER :
             return {

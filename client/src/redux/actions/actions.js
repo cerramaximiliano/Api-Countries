@@ -1,4 +1,4 @@
-import { ADD_COUNTRIES, ADD_COUNTRIES_BY_NAME, FILTER, FILTER_BY_CONTINENT, ORDER, ORDER_POPULATION, ADD_ACTIVITIES, RESET_FILTER } from './actions_types';
+import { ADD_COUNTRIES, ADD_COUNTRIES_BY_NAME, FILTER, FILTER_BY_CONTINENT, ORDER, ORDER_POPULATION, ADD_ACTIVITIES, RESET_FILTER, CREATE_ACTIVITIES } from './actions_types';
 import axios from 'axios';
 
 const URL_BASE = `http://localhost:3001/`
@@ -60,13 +60,32 @@ export const orderByPopulation = (order) => {
 
 export const addActivities = () => {
     return async function (dispatch) {
-        const {data} = await axios.get(`${URL_BASE}activities`)
-        return dispatch({
-            type: ADD_ACTIVITIES,
-            payload: data
-        })
+        try {
+            const {data} = await axios.get(`${URL_BASE}activities`)
+            return dispatch({
+                type: ADD_ACTIVITIES,
+                payload: data
+            })
+        }catch(err){
+            console.log(err)
+        }
     }
-}
+};
+
+export const createActivities = () => {
+    return async function(dispatch) {
+        try {
+            const {data} = await axios.post(`${URL_BASE}activities`)
+            return dispatch({
+                type: CREATE_ACTIVITIES,
+                payload: data
+            })
+        }catch (err) {
+            console.log(err)
+        }
+
+    }
+};
 
 export const resetFilter = () => {
     return {
