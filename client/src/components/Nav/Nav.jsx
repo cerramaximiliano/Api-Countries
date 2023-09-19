@@ -2,12 +2,13 @@ import React, {useState, useEffect} from 'react';
 import {connect, useDispatch} from 'react-redux';
 import styles from './Nav.module.css';
 import { filterCards, orderCards, addActivities, orderByPopulation, filterByeContinent, resetFilter, addCountriesByName } from '../../redux/actions/actions';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 
 export function Nav ( {activities} ) {
     const dispatch = useDispatch()
-
+    const {pathname} = useLocation()
+    console.log(pathname);
     const handleOrder = (e) => {
         dispatch(orderCards(e.target.value))
     }
@@ -35,7 +36,11 @@ export function Nav ( {activities} ) {
 
     return (
         <div className={styles.container}>
-            <div>
+            {
+                pathname === '/countries' 
+                ?
+                <div className={styles.navbarContainer}>
+                <div>
                 <input type="text" placeholder='Country' name='countryField' />
                 <button onClick={handleClick} >Search</button>
             </div>
@@ -71,16 +76,20 @@ export function Nav ( {activities} ) {
                     <option value="Asia">Asia</option>
                     <option value="Oceania">Oceania</option>
                 </select>
-
                 <button onClick={handleReset} >Reset</button>
             </div>
-
             <div>
                 <Link to={'/form'}>
                     <button>Add Activity</button>
                 </Link>
-
             </div>
+            </div>
+            :
+            <div className={styles.navbarContainer}>
+                <Link to={'countries'}>Home</Link>
+            </div>
+            }
+
 
         </div>
     )

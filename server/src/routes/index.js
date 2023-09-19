@@ -16,7 +16,7 @@ router.get('/countries', async (req, res) => {
 });
 router.get('/countries/:idPais', async (req, res) => {
     const {idPais} = req.params;
-    if( idPais.length !== 3) return res.status(203).send(`Id no válido`)
+    if( idPais.length !== 3) return res.status(400).send(`Id no válido`)
     try {
         const country = await getCountryById(idPais.toUpperCase());
         if( !country ) return res.status(204).send(`No se encontraron datos para ese id`)

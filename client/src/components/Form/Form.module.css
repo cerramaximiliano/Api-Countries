@@ -1,5 +1,23 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cardForm {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 10px;
+        border: 1px solid #000;
+        min-width: 350px;
+        min-height: 650px;
+        border-radius: 5%;
+        margin: auto;
+}
 .danger {
-    color: red
+    color: red;
+    margin: 0;
 }
 .success {
     border: 1px solid green

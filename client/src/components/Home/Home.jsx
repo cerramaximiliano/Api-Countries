@@ -7,7 +7,7 @@ const Home = () => {
     return (
         <>
             <div className={styles.containerButton}>
-            <button onClick={() => navigate('/countries')  }>Start</button>
+            <button onClick={() => navigate('/countries')  }>Get Started</button>
             </div>
         </>
     )

@@ -4,7 +4,9 @@
 .Northern-Lights-3-hex { color: #1E5959; }
 .Northern-Lights-4-hex { color: #3B8C6E; }
 .Northern-Lights-5-hex { color: #89D99D; } */
-
+body {
+  background-color: #0B2B40
+}
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -46,7 +48,7 @@ h1 {
 button {
   border-radius: 8px;
   border: 1px solid transparent;
-  padding: 0.6em 1.2em;
+  padding: 0.4em 1em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
@@ -61,6 +63,20 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+input[type="text"],
+select,
+textarea {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.4em 1em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  /* background-color: #1a1a1a; */
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
 
 @media (prefers-color-scheme: light) {
   :root {

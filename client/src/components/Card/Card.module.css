@@ -1,11 +1,10 @@
 .card {
-    margin-bottom: 10px; /* Espacio entre elementos */
-    padding: 10px; /* Agrega espacio de separación entre elementos */
+    margin-bottom: 10px;
+    padding: 10px;
     border: 1px solid #000;
     width: 200px;
     height: 300px;
     border-radius: 5%;
-
 }
 .cardElements{
     display: flex;
