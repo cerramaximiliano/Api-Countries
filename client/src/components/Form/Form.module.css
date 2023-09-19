@@ -9,11 +9,14 @@
         flex-direction: column;
         justify-content: space-evenly;
         padding: 10px;
-        border: 1px solid #000;
         min-width: 350px;
         min-height: 650px;
-        border-radius: 5%;
+        border-radius: 8px;
         margin: auto;
+        background-color: #FFFF;
+}
+input, button, select {
+    background-color: #F3F4F8;
 }
 .danger {
     color: red;
