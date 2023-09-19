@@ -1,4 +1,11 @@
 .container {
+    background-color: #EBF1FA;
+    border-radius: 20px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.containerCards {
     display: flex;
     flex-wrap: wrap; /* Permitir que los elementos se envuelvan en filas */
     justify-content: space-between; /* Espaciado entre elementos */
@@ -7,7 +14,13 @@
 .pagination {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.pagination button {
+    font-size: 0.8em;
 }
 .message {
     margin: auto
 }
+

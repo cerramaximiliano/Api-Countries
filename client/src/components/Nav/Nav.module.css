@@ -3,14 +3,23 @@
     justify-content: space-between;
     margin-top: 20px;
     margin-bottom: 20px;
-    padding: 15px;
     width: 100%;
-    border: 1px solid;
     border-radius: 8px;
-    overflow: hidden;
+    height: 85px;
+}
+.orderAndFilter{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 .navbarContainer{
   display: flex;
   justify-content: space-around;
   width: 100%;
+}
+.orderContainer, .orderFilter {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 10px;
 }

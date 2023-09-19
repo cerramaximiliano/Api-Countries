@@ -1,10 +1,18 @@
 .card {
     margin-bottom: 10px;
     padding: 10px;
-    border: 1px solid #000;
+    border: 1px solid #FFFF;
     width: 200px;
     height: 300px;
-    border-radius: 5%;
+    border-radius: 8px;
+    background-color: #FFFF;
+
+}
+.card a {
+    color: #9496A1
+}
+.card a h2 {
+    color: #404252
 }
 .cardElements{
     display: flex;

@@ -41,10 +41,12 @@ export function Nav ( {activities} ) {
                 ?
                 <div className={styles.navbarContainer}>
                 <div>
-                <input type="text" placeholder='Country' name='countryField' />
-                <button onClick={handleClick} >Search</button>
-            </div>
-            <div>
+                    <input type="text" placeholder='Country' name='countryField' />
+                    <button onClick={handleClick} >Search</button>
+                </div>
+
+            <div className={styles.orderAndFilter}>
+                <div className={styles.orderContainer}>
                 <select name="orderByName" defaultValue={"0"} onChange={handleOrder} >
                     <option value="0" disabled={true} >Order Countries</option>
                     <option value="ASC">A - Z</option>
@@ -56,7 +58,9 @@ export function Nav ( {activities} ) {
                     <option value="MAX">MAX - MIN</option>
                     <option value="MIN">MIN - MAX</option>
                 </select>
+                </div>
 
+                <div className={styles.orderFilter}>
                 <select name="activity" defaultValue={"0"} onChange={handleFilter} >
                     <option value="0" disabled={true} >Find By Activity</option>
                     {
@@ -76,8 +80,13 @@ export function Nav ( {activities} ) {
                     <option value="Asia">Asia</option>
                     <option value="Oceania">Oceania</option>
                 </select>
+                </div>
+                <div>
                 <button onClick={handleReset} >Reset</button>
+                </div>
+
             </div>
+
             <div>
                 <Link to={'/form'}>
                     <button>Add Activity</button>
