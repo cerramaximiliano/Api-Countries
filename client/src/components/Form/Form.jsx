@@ -1,9 +1,14 @@
 import React, {useState, useEffect} from 'react';
-import {connect} from 'react-redux';
+import {useSelector, useDispatch} from 'react-redux';
 import { validate } from './validate';
+import { createActivities } from '../../redux/actions/actions';
 import styles from './Form.module.css';
 
-export const Form = ( {countries} ) => {
+
+
+export default function Form () {
+    const dispatch = useDispatch();
+    const countries = useSelector(({countries}) =>  countries)
     const [errors, setErrors] = useState({});
     const [formData, setFormData] = useState({
         name: '',
@@ -31,7 +36,18 @@ export const Form = ( {countries} ) => {
     };
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log('submit', formData);
+        dispatch(createActivities(formData))
+        // try {
+        //     const {data} = await axios.post(`${URL_BASE}activities`, formData);
+        //     if ( data ) {
+        //         if( data.ok === false) window.alert(data.message)
+        //         if(data.created === false) window.alert('Ha sido actualizada la actividad')
+        //         else window.alert('Ha sido creada la actividad')
+        //     }
+        //     else window.alert('Ha ocurrido un error. Inicie nuevamente.')
+        // }catch (err) {
+        //     window.alert('Ha ocurrido un error. Inicie nuevamente.')
+        // }
     }
 
     return (
@@ -52,7 +68,7 @@ export const Form = ( {countries} ) => {
                 <label htmlFor="difficulty">Difficulty: </label>
                 </div>
                 <div>
-                <input type="text" name='difficulty' onChange={handleChange} className={errors.difficulty ? styles.error : styles.success}/>
+                <input type="number" step="1" name='difficulty' onChange={handleChange} className={errors.difficulty ? styles.error : styles.success}/>
                 </div>
             </div>
             <div>
@@ -60,7 +76,7 @@ export const Form = ( {countries} ) => {
                 <label htmlFor="duration">Duration: </label>
                 </div>
                 <div>
-                <input type="text" name='duration' onChange={handleChange} />
+                <input type="number" step="1" name='duration' onChange={handleChange} />
                 </div>
             </div>
             <div>
@@ -102,12 +118,4 @@ export const Form = ( {countries} ) => {
         </div>
         </>
     )
-}
-
-export function mapStateToProps(state){
-    return {
-        countries: state.allCountries,
-     }
 };
-
-export default connect (mapStateToProps)(Form);

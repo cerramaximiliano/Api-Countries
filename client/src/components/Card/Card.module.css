@@ -6,7 +6,6 @@
     height: 300px;
     border-radius: 8px;
     background-color: #FFFF;
-
 }
 .card a {
     color: #9496A1
@@ -27,4 +26,7 @@
 .cardImage {
     width: 120px;
     height: 75px;
+}
+.detailsContainer div h3, .detailsContainer div p{
+    margin: 0;
 }

@@ -1,28 +1,40 @@
 import React, {useState, useEffect} from 'react';
-import {connect, useDispatch} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import styles from './Nav.module.css';
-import { filterCards, orderCards, addActivities, orderByPopulation, filterByeContinent, resetFilter, addCountriesByName } from '../../redux/actions/actions';
+import { filterCards, orderCards, addActivities, orderByPopulation, resetFilter, addCountriesByName } from '../../redux/actions/actions';
 import { Link, useLocation } from 'react-router-dom';
 
 
-export function Nav ( {activities} ) {
+export default function Nav () {
+    const activities = useSelector(({activities}) =>  activities)
     const dispatch = useDispatch()
     const {pathname} = useLocation()
-    console.log(pathname);
-    const handleOrder = (e) => {
-        dispatch(orderCards(e.target.value))
+    const [filter, setFilter] = useState({
+        activity: '',
+        continent: ''
+    })
+
+    const handleOrder = (event) => {
+        dispatch(orderCards(event.target.value))
     }
-    const handleOrderByPopulation = (e) => {
-        dispatch(orderByPopulation(e.target.value))
+    const handleOrderByPopulation = (event) => {
+        dispatch(orderByPopulation(event.target.value))
     };
-    const handleFilter = (e) => {
-        dispatch(filterCards(e.target.value))
+    const handleFilter = (event) => {
+        const {name, value} = event.target;
+        setFilter({...filter, [name]:value })
+        dispatch(filterCards({
+            ...filter,
+            [name]:value
+        }))
     };
-    const handleFilterByContinent = (e) => {
-        dispatch(filterByeContinent(e.target.value))
-    }
+
     const handleReset = () => {
         const select = document.querySelectorAll('select');
+        setFilter({
+            activity: '',
+            continent: ''
+        })
         select.forEach(ele => ele.value = "0");
         dispatch(resetFilter())
     }
@@ -70,7 +82,7 @@ export function Nav ( {activities} ) {
                     ))
                     }
                 </select>
-                <select name="continent" defaultValue={"0"} onChange={handleFilterByContinent} >
+                <select name="continent" defaultValue={"0"} onChange={handleFilter} >
                     <option value="0" disabled={true}>Find By Continent</option>
                     <option value="South America">South America</option>
                     <option value="North America">North America</option>
@@ -95,19 +107,13 @@ export function Nav ( {activities} ) {
             </div>
             :
             <div className={styles.navbarContainer}>
-                <Link to={'countries'}>Home</Link>
+                <div>
+                    <Link to={'countries'} className='primaryButton'>Home</Link>
+                </div>
             </div>
             }
 
 
         </div>
     )
-}
-
-export function mapStateToProps(state){
-    return {
-        activities: state.activities,
-     }
 };
-
-export default connect (mapStateToProps)(Nav);

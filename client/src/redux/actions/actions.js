@@ -13,6 +13,7 @@ export const addCountries = () => {
         })
     }catch(err){
         console.log(err)
+        window.alert(`Ha ocurrido un error en el servidor`)
     }}
 };
 
@@ -25,22 +26,17 @@ export const addCountriesByName = (name) => {
                 payload: data
             })
         }catch(err){
-
+            console.log(err);
+            window.alert(`Ha ocurrido un error en el servidor`)
         }
     }
 }
 
-export const filterCards = (activity) => {
+export const filterCards = (filter) => {
+    console.log(filter);
     return {
         type: FILTER,
-        payload: activity
-    }
-};
-
-export const filterByeContinent = (continent) => {
-    return {
-        type: FILTER_BY_CONTINENT,
-        payload: continent
+        payload: filter
     }
 };
 
@@ -66,22 +62,32 @@ export const addActivities = () => {
                 type: ADD_ACTIVITIES,
                 payload: data
             })
+
         }catch(err){
-            console.log(err)
+            window.alert(`Ha ocurrido un error en el servidor`)
         }
     }
 };
 
-export const createActivities = () => {
+export const createActivities = (formData) => {
     return async function(dispatch) {
         try {
-            const {data} = await axios.post(`${URL_BASE}activities`)
-            return dispatch({
-                type: CREATE_ACTIVITIES,
-                payload: data
-            })
+            const {data} = await axios.post(`${URL_BASE}activities`, formData)
+            if ( data ) {
+                if(data.ok === true) {
+                    if( data.created === true ) window.alert(`Actividad creada correctamente`);
+                    else window.alert(`Actividad actualizada correctamente`);
+                    return dispatch({
+                        type: CREATE_ACTIVITIES,
+                        payload: data.data
+                    })
+                }else {
+                    window.alert(`Complete correctamente los datos`)
+                }
+            }
         }catch (err) {
             console.log(err)
+            window.alert(`Ha ocurrido un error en el servidor`)
         }
 
     }

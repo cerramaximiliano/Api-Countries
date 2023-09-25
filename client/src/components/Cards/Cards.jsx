@@ -1,12 +1,13 @@
 import React, {useState, useEffect} from 'react';
-import {connect, useDispatch} from 'react-redux';
+import {connect, useDispatch, useSelector} from 'react-redux';
 import { addCountries } from '../../redux/actions/actions';
 import styles from './Cards.module.css'
 import Card from '../Card/Card';
 
 
-export function Cards ( {countries} )  {
+export default function Cards (  )  {
     const dispatch = useDispatch();
+    const countries = useSelector(({allCountries}) =>  allCountries);
     const [currentPage, setCurrentPage] = useState(1);
     useEffect(() => {
         dispatch(addCountries())
@@ -18,7 +19,7 @@ export function Cards ( {countries} )  {
     const startIndex = currentPage * countriesPerPage - countriesPerPage;
     const endIndex = currentPage * countriesPerPage;
     const filteredCountries = countries.slice(startIndex, endIndex);
-
+    console.log(filteredCountries);
     const handlePageChange = (page) => {
         setCurrentPage(page)
     };
@@ -28,8 +29,9 @@ export function Cards ( {countries} )  {
     return (
         <div className={styles.container}>
             <div className={styles.containerCards}>
+                {console.log(filteredCountries)}
             {
-            (filteredCountries || filteredCountries.length > 0) 
+            (filteredCountries && filteredCountries.length > 0)
             ?   filteredCountries.map((country) =>  (
                 <Card key={country.id} 
                 id={country.id} 
@@ -63,11 +65,5 @@ export function Cards ( {countries} )  {
         </div>
     )
 }
-export function mapStateToProps(state){
-    return {
-        countries: state.allCountries,
-     }
-};
 
-export default connect (mapStateToProps)(Cards);
 

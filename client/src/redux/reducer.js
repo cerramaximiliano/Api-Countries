@@ -1,4 +1,4 @@
-import { ADD_ACTIVITIES, ADD_COUNTRIES, ADD_COUNTRIES_BY_NAME, FILTER, FILTER_BY_CONTINENT, ORDER, ORDER_POPULATION, RESET_FILTER, CREATE_ACTIVITIES} from "./actions/actions_types";
+import { ADD_ACTIVITIES, ADD_COUNTRIES, ADD_COUNTRIES_BY_NAME, FILTER, ORDER, ORDER_POPULATION, RESET_FILTER, CREATE_ACTIVITIES} from "./actions/actions_types";
 
 const initialState = {
     countries: [],
@@ -20,21 +20,22 @@ function reducer ( state = initialState, action ){
                 allCountries: action.payload
             }
         case FILTER :
-            const allCountriesFilter = state.countries.filter(country => 
-                country["Activities"].some((activity) => activity.name === action.payload)
-                );
-            return {
-                ...state,
-                allCountries: allCountriesFilter
+            let cloneCountries = [...state.countries];
+            if( action.payload.activity !== '' ){
+                console.log(action.payload.activity);
+                cloneCountries = cloneCountries.filter(country =>  country["Activities"].some((activity) => activity.name === action.payload.activity));
             }
-        case FILTER_BY_CONTINENT :
-            const filterByContinent = state.countries.filter(country => country.continent === action.payload)
-            return {
-                ...state,
-                allCountries: filterByContinent
+            if ( action.payload.continent !== '') {
+                console.log(action.payload.continent);
+                cloneCountries = cloneCountries.filter(country => country.continent === action.payload.continent)
             }
+                return {
+                ...state,
+                allCountries: cloneCountries
+            }
+
         case ORDER :
-            const clonedCountries = [...state.countries];
+            const clonedCountries = [...state.allCountries];
             const orderCountries = clonedCountries.sort((a, b) => {
               if (action.payload === 'ASC') {
                 return a.id.localeCompare(b.id)

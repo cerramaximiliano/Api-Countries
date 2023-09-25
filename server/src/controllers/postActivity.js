@@ -7,9 +7,8 @@ module.exports = async ( name, difficulty, duration, season, countries ) => {
             defaults: {name, difficulty, duration, season} 
         });
         activity.addCountries(countries);
-        return activity;
+        return [activity, created];
     }catch (err) {
-        console.log(err)
         throw new Error(`Error en la base de datos`)
     }
 }

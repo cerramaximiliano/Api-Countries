@@ -7,9 +7,9 @@
 
 .containerCards {
     display: flex;
-    flex-wrap: wrap; /* Permitir que los elementos se envuelvan en filas */
-    justify-content: space-between; /* Espaciado entre elementos */
-    padding: 20px; /* Espaciado alrededor del contenedor */
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
 }
 .pagination {
     display: flex;
@@ -23,4 +23,8 @@
 .message {
     margin: auto
 }
-
+.activePage {
+    background-color: #c52121;
+    color: #fff;
+    border: 1px solid #c52121;
+  }

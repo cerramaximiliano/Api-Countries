@@ -38,12 +38,17 @@ router.get('/name', async (req, res) => {
 });
 router.post('/activities', async (req, res) => {
     const { name, difficulty, duration, season, countries } = req.body;
-    if ( !name || !difficulty || !duration || !season || !countries ) return res.status(203).send(`Debe ingresar valores válidos`);
+    console.log(name, difficulty, duration, season, countries);
+    if ( !name || !difficulty || !season || !countries ) return res.status(203).json({ok: false, message: `Debe ingresar valores válidos`});
     try {
         const activity = await postActivity(name, difficulty, duration, season, countries)
-        res.status(201).json(activity);
+        res.status(201).json({
+            ok: true,
+            created: activity[1],
+            data: activity[0]
+        });
     }catch (err){
-        res.status(500).json({error: err.message})
+        res.status(500).json({ok: false, error: err.message})
     }
 });
 

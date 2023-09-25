@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, {useState, useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import Card from '../Card/Card';
+import styles from './Detail.module.css';
 
 const Detail = () => {
     const URLBASE = `http://localhost:3001/`;
@@ -27,7 +28,7 @@ const Detail = () => {
     }, [id]);
 
     return (
-        <div>
+        <div className={styles.detailsContainer}>
             <h3>Country Details</h3>
             {isLoading && <p>Cargando...</p>}
             {error && <p>Error al cargar los datos del país: {error.message}</p>}
@@ -41,6 +42,7 @@ const Detail = () => {
                 subregion={countryData.subregion}
                 area={countryData.area}
                 population={countryData.population}
+                activities={countryData.Activities}
                 />
             )}
         </div>
