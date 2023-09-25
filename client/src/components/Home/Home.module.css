@@ -1,3 +1,14 @@
 .containerButton{
-    margin: auto
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+.containerButton img {
+    width: 25%;
+    margin: auto;
+    filter: drop-shadow(4px 4px 6px black);
+}
+.containerButton button {
+    width: fit-content;
+    margin: auto;
 }

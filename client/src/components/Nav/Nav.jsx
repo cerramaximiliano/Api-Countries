@@ -99,9 +99,12 @@ export default function Nav () {
 
             </div>
 
-            <div>
+            <div className={styles.rightButtons}>
                 <Link to={'/form'}>
                     <button>Add Activity</button>
+                </Link>
+                <Link to={'/'}>
+                    <button>Logout</button>
                 </Link>
             </div>
             </div>
