@@ -40,7 +40,8 @@ export default function Nav () {
     }
     const handleClick = () => {
         const input = document.querySelector('[name=countryField]').value;
-        dispatch(addCountriesByName(input))
+        if( input.length === 0 ) window.alert(`Debe ingresar un nombre antes de continuar`)
+        else dispatch(addCountriesByName(input))
     }
     useEffect(() => {
         dispatch(addActivities())
@@ -53,7 +54,7 @@ export default function Nav () {
                 ?
                 <div className={styles.navbarContainer}>
                 <div>
-                    <input type="text" placeholder='Country' name='countryField' />
+                    <input type="text" placeholder='Country' name='countryField' className={styles.searchInput}/>
                     <button onClick={handleClick} >Search</button>
                 </div>
 

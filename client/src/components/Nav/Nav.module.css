@@ -28,3 +28,6 @@
   flex-direction: column;
   justify-content: space-between;
 }
+.searchInput {
+  margin-right: 10px;
+}
