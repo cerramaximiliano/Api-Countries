@@ -37,17 +37,6 @@ export default function Form () {
     const handleSubmit = (event) => {
         event.preventDefault();
         dispatch(createActivities(formData))
-        // try {
-        //     const {data} = await axios.post(`${URL_BASE}activities`, formData);
-        //     if ( data ) {
-        //         if( data.ok === false) window.alert(data.message)
-        //         if(data.created === false) window.alert('Ha sido actualizada la actividad')
-        //         else window.alert('Ha sido creada la actividad')
-        //     }
-        //     else window.alert('Ha ocurrido un error. Inicie nuevamente.')
-        // }catch (err) {
-        //     window.alert('Ha ocurrido un error. Inicie nuevamente.')
-        // }
     }
 
     return (
