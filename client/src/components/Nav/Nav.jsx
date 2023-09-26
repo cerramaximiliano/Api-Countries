@@ -60,13 +60,13 @@ export default function Nav () {
             <div className={styles.orderAndFilter}>
                 <div className={styles.orderContainer}>
                 <select name="orderByName" defaultValue={"0"} onChange={handleOrder} >
-                    <option value="0" disabled={true} >Order Countries</option>
+                    <option value="0" disabled={true} >Order By Name</option>
                     <option value="ASC">A - Z</option>
                     <option value="DESC">Z - A</option>
                 </select>
 
                 <select name="orderByPopulation" defaultValue={"0"} onChange={handleOrderByPopulation} >
-                    <option value="0" disabled={true} >Order Countries</option>
+                    <option value="0" disabled={true} >Order By Population</option>
                     <option value="MAX">MAX - MIN</option>
                     <option value="MIN">MIN - MAX</option>
                 </select>

@@ -11,17 +11,6 @@ module.exports = (sequelize) => {
             type: DataTypes.STRING(30),
             unique: true,
             allowNull: false,
-            // validate: {
-            //     noBlanksValidation: function (value) {
-            //         if (!/^(?!.*  )(?!\s*$).+/.test(value)) {
-            //             throw new Error("Field 'Name': Not empty, no lone whitespace, max 2 consecutive spaces.");
-            //         };
-            //     },
-            //     async isUnique(value) {
-            //         let existingActivity = await Activity.findOne({ where: { name: value } });
-            //         if (existingActivity) throw new Error("There is already an activity with that name.");
-            //     }
-            // }
         },
         difficulty: {
             type: DataTypes.INTEGER,
@@ -38,12 +27,7 @@ module.exports = (sequelize) => {
         season: {
             type: DataTypes.ENUM("Spring", "Autumn", "Winter", "Summer"),
             allowNull: false,
-            // validate: {
-            //     isIn: {
-            //         args: [["Spring", "Autumn", "Winter", "Summer"]],
-            //         msg: "Season must be one of the following options: Spring, Autumn, Winter or Summer."
-            //     },
-            // }
+
         }
     }, {
         timestamps: false

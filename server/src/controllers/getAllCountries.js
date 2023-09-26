@@ -7,7 +7,7 @@ module.exports = async () => {
         const findAllCountries = await Country.findAll( 
             {include: {
                 model: Activity,
-                attributes: ["name", "id"],
+                attributes: ["name", "id", "season", "difficulty", "duration"],
                 through: {
                     attributes: [],
                 }

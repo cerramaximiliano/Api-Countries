@@ -6,7 +6,7 @@ module.exports = async (id) => {
         const country = await Country.findByPk(id,
             {include: {
                 model: Activity,
-                attributes: ["name"],
+                attributes: ["name", "id", "season", "difficulty", "duration"],
                 through: {
                     attributes: [],
                 }

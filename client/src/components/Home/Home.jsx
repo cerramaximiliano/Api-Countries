@@ -8,6 +8,7 @@ const Home = () => {
     return (
         <>
             <div className={styles.containerButton}>
+                <h2>Countries API</h2>
                 <img src={flags} alt="" />
                 <button onClick={() => navigate('/countries')  }>Get Started</button>
             </div>

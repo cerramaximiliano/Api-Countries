@@ -6,6 +6,7 @@
 .containerButton img {
     width: 25%;
     margin: auto;
+    margin-bottom: 0.83em;
     filter: drop-shadow(4px 4px 6px black);
 }
 .containerButton button {
