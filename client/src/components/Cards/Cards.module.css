@@ -10,6 +10,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 20px;
+    color:  #404252;
 }
 .pagination {
     display: flex;

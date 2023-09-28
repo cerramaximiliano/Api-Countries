@@ -5,7 +5,7 @@
     margin-bottom: 20px;
     width: 100%;
     border-radius: 8px;
-    height: 85px;
+    min-height: 85px;
 }
 .orderAndFilter{
   display: flex;
@@ -15,6 +15,7 @@
 .navbarContainer{
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
   width: 100%;
 }
 .orderContainer, .orderFilter {

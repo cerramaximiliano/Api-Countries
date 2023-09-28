@@ -15,9 +15,11 @@ export default function Nav () {
     })
 
     const handleOrder = (event) => {
+
         dispatch(orderCards(event.target.value))
     }
     const handleOrderByPopulation = (event) => {
+        
         dispatch(orderByPopulation(event.target.value))
     };
     const handleFilter = (event) => {

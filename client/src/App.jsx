@@ -5,7 +5,9 @@ import Cards from './components/Cards/Cards';
 import Form from './components/Form/Form';
 import Detail from './components/Detail/Detail';
 import Nav from './components/Nav/Nav';
+import Error from './components/Error/Error';
 import './App.css';
+
 
 
 function App() {
@@ -21,6 +23,7 @@ function App() {
             <Route path='/countries' element={<Cards/>}></Route>
             <Route path='/form' element={<Form/>}></Route>
             <Route path='/detail/:id' element={<Detail/>}></Route>
+            <Route path='*' element={<Error/>}></Route>
       </Routes>
       <div>
             <footer className='footer'>

@@ -12,9 +12,7 @@ module.exports = async ( name ) => {
                 attributes: [],
             }
         }
-
         });
-
         return findByName;
     }catch( err){
         throw new Error(`Error en la base de datos`)

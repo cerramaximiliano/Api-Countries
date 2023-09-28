@@ -6,6 +6,7 @@
     height: 300px;
     border-radius: 8px;
     background-color: #FFFF;
+    color: #404252;
 }
 .card a {
     color: #9496A1
@@ -29,4 +30,5 @@
 }
 .detailsContainer div h3, .detailsContainer div p{
     margin: 0;
+    color: #404252;
 }
