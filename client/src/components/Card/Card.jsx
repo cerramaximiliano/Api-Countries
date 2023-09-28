@@ -1,14 +1,14 @@
 import React, {useState, useEffect} from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import styles from './Card.module.css';
+import { numberDecimals } from '../../utils/utils';
 
-const Card = ({id, name, continent, image, capital, subregion, area, population, activities}) => {
+export default function Card ({id, name, continent, image, capital, subregion, area, population, activities}) {
     const {pathname} = useLocation()
     return (
         <div className={pathname === '/countries' ? styles.card : false}>
             {pathname === '/countries' ?
                     <Link to={`/detail/${id}`} className={styles.cardElements}>
-
                             <div className={styles.cardChildElements}>
                                 <h2>{name}</h2>
                                 <p>{continent}</p>
@@ -51,14 +51,14 @@ const Card = ({id, name, continent, image, capital, subregion, area, population,
                             {area && 
                             <div>
                             <h3>Area</h3>
-                            <p>{area} km2</p>
+                            <p>{ numberDecimals(area) } km2</p>
                             </div>
                             }
 
                             {population && 
                             <div>
                             <h3>Population</h3> 
-                            <p>{population}</p>
+                            <p>{ numberDecimals(population) }</p>
                             </div>
                             }
 
@@ -83,7 +83,7 @@ const Card = ({id, name, continent, image, capital, subregion, area, population,
     )
 }
 
-export default Card;
+
 
 
 

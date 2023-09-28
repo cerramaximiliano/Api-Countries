@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {connect, useDispatch, useSelector} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import { addCountries } from '../../redux/actions/actions';
 import styles from './Cards.module.css'
 import Card from '../Card/Card';
@@ -19,7 +19,6 @@ export default function Cards (  )  {
     const startIndex = currentPage * countriesPerPage - countriesPerPage;
     const endIndex = currentPage * countriesPerPage;
     const filteredCountries = countries.slice(startIndex, endIndex);
-    console.log(filteredCountries);
     const handlePageChange = (page) => {
         setCurrentPage(page)
     };
@@ -29,7 +28,6 @@ export default function Cards (  )  {
     return (
         <div className={styles.container}>
             <div className={styles.containerCards}>
-                {console.log(filteredCountries)}
             {
             (filteredCountries && filteredCountries.length > 0)
             ?   filteredCountries.map((country) =>  (

@@ -11,10 +11,13 @@ const Detail = () => {
     const [countryData, setCountryData] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
-  
+    const alertImage = '../src/assets/warning.png';
+    
     useEffect(() => {
       const fetchData = async () => {
+
         setIsLoading(true);
+
         try {
           const response = await axios(`${URLBASE}countries/${id}`);
           setCountryData(response.data);
@@ -30,8 +33,13 @@ const Detail = () => {
     return (
         <div className={styles.detailsContainer}>
             <h3>Country Details</h3>
-            {isLoading && <p>Cargando...</p>}
-            {error && <p>Error al cargar los datos del país: {error.message}</p>}
+            {isLoading && <p>Loading...</p>}
+            {error && 
+            <div>
+              <img src={alertImage} alt="Error" style={{width: "30%"}} />
+              <p>Error al cargar los datos del país: {error.message}</p>
+            </div>
+            }
             {countryData && (
                 <Card
                 key={countryData.id}
