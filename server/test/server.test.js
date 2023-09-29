@@ -8,6 +8,7 @@ const argentina =  {
     continent: 'South America',
     capital: 'Buenos Aires',
     subregion: 'South America',
+    languages: "Guaraní",
     area: 2780400,
     population: 45376763,
     Activities: []
