@@ -14,6 +14,7 @@
         border-radius: 8px;
         margin: auto;
         background-color: #FFFF;
+        color: #404252;
 }
 input, button, select {
     background-color: #F3F4F8;
