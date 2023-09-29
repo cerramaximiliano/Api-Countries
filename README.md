@@ -1,11 +1,13 @@
-![javascript](https://github.com/cerramaximiliano/cr-pi-countries/assets/65555679/b05fe861-1dfd-4fa5-be04-845b252f7e8f)
-![react](https://github.com/cerramaximiliano/cr-pi-countries/assets/65555679/4acd46af-58a8-43b7-bf6b-f1f153c5bec2)
-![redux](https://github.com/cerramaximiliano/cr-pi-countries/assets/65555679/4b007a4f-874f-414d-948f-87af4b8f0e5e)
-![nodejs](https://github.com/cerramaximiliano/cr-pi-countries/assets/65555679/74f1d36e-eca7-4e03-9554-6f1543ef147d)
-![postgresql](https://github.com/cerramaximiliano/cr-pi-countries/assets/65555679/570ebe91-ead6-4935-b46e-79e1462abb21)
 
 
 # **API COUNTRIES** | Proyecto Individual para Soy Henry Bootcamp
+
+<img src="https://github.com/cerramaximiliano/cr-pi-countries/assets/65555679/b05fe861-1dfd-4fa5-be04-845b252f7e8f" width="100">
+<img src="https://github.com/cerramaximiliano/cr-pi-countries/assets/65555679/4acd46af-58a8-43b7-bf6b-f1f153c5bec2" width="100">
+<img src="https://github.com/cerramaximiliano/cr-pi-countries/assets/65555679/4b007a4f-874f-414d-948f-87af4b8f0e5e" width="100">
+<img src="https://github.com/cerramaximiliano/cr-pi-countries/assets/65555679/74f1d36e-eca7-4e03-9554-6f1543ef147d" width="100">
+<img src="https://github.com/cerramaximiliano/cr-pi-countries/assets/65555679/570ebe91-ead6-4935-b46e-79e1462abb21" width="100">
+
 
 ## **📌 OBJETIVOS**
 -  Construir una Single Page Application utlizando las tecnologías: **React**, **Redux**, **Node**, **Express** y **Sequelize**.
