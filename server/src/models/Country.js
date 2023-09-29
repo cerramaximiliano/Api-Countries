@@ -25,6 +25,11 @@ module.exports = (sequelize) => {
       allowNull: false,
       default: 'Not Available'
     },
+    languages: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      default: 'Not Available'
+    },
     subregion: {
       type: DataTypes.STRING,
       allowNull: false,

@@ -36,6 +36,7 @@ router.get('/name', async (req, res) => {
         res.status(500).json({Error: err.message})
     }
 });
+
 router.post('/activities', async (req, res) => {
     const { name, difficulty, duration, season, countries } = req.body;
     console.log(name, difficulty, duration, season, countries);

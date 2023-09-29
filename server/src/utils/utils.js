@@ -8,6 +8,7 @@ const pathCountries = () => {
   };
 
   const filtrarInfoCountries = (country) => {
+    // console.log(  Object.keys(country.languages)[0]  );
     return {
       id: country.cca3,
       name: country.name.common,
@@ -16,7 +17,8 @@ const pathCountries = () => {
       capital: country.capital ? country.capital[0] : 'Not Available',
       subregion: country.subregion ?? 'Not Available',
       area: country.area ?? 0,
-      population: country.population ?? 0
+      population: country.population ?? 0,
+      languages: country.languages ? country.languages[ Object.keys(country.languages)[0] ] : 'Not Available'
     }
   }
 

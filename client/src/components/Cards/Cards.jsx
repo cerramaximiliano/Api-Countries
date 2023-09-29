@@ -35,6 +35,7 @@ export default function Cards (  )  {
                 id={country.id} 
                 name={country.name} 
                 continent={country.continent} 
+                languages={country.languages}
                 image={country.flag} 
                 />
             ))

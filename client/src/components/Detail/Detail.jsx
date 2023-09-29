@@ -50,6 +50,7 @@ const Detail = () => {
                 subregion={countryData.subregion}
                 area={countryData.area}
                 population={countryData.population}
+                languages={countryData.languages}
                 activities={countryData.Activities}
                 />
             )}

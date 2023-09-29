@@ -21,6 +21,7 @@ function reducer ( state = initialState, action ){
             }
         case FILTER :
             let cloneCountries = [...state.countries];
+            
             if( action.payload.activity !== '' ){
                 console.log(action.payload.activity);
                 cloneCountries = cloneCountries.filter(country =>  country["Activities"].some((activity) => activity.name === action.payload.activity));

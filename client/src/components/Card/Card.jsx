@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import styles from './Card.module.css';
 import { numberDecimals } from '../../utils/utils';
 
-export default function Card ({id, name, continent, image, capital, subregion, area, population, activities}) {
+export default function Card ({id, name, continent, image, capital, subregion, area, population, activities, languages}) {
     const {pathname} = useLocation()
     return (
         <div className={pathname === '/countries' ? styles.card : false}>
@@ -60,6 +60,15 @@ export default function Card ({id, name, continent, image, capital, subregion, a
                             <h3>Population</h3> 
                             <p>{ numberDecimals(population) }</p>
                             </div>
+                            }
+
+                            {
+                                languages &&
+                                <div>
+                                    <h3>Language</h3>
+                                    <p>{languages}</p>
+                                </div>
+
                             }
 
                             {activities.length > 0 ? 
