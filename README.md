@@ -1,7 +1,8 @@
-![postgresql](https://github.com/cerramaximiliano/cr-pi-countries/assets/65555679/570ebe91-ead6-4935-b46e-79e1462abb21)![nodejs](https://github.com/cerramaximiliano/cr-pi-countries/assets/65555679/74f1d36e-eca7-4e03-9554-6f1543ef147d)![redux](https://github.com/cerramaximiliano/cr-pi-countries/assets/65555679/4b007a4f-874f-414d-948f-87af4b8f0e5e)![react](https://github.com/cerramaximiliano/cr-pi-countries/assets/65555679/4acd46af-58a8-43b7-bf6b-f1f153c5bec2)![javascript](https://github.com/cerramaximiliano/cr-pi-countries/assets/65555679/b05fe861-1dfd-4fa5-be04-845b252f7e8f)
 # **API COUNTRIES** | Proyecto Individual para Soy Henry Bootcamp
+
+
+
 ![Uploadin<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
 <style type="text/css">
@@ -19,6 +20,7 @@
 </svg>
 g javascript.svg…]()
 ![Uploadi<?xml version="1.0" encoding="utf-8"?>
+
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
