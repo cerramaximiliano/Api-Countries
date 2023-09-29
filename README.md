@@ -1,14 +1,14 @@
 ## **API COUNTRIES** | Proyecto Individual para Soy Henry Bootcamp
 <div style="text-align: center">
 <br/>
-<img src="https://github.com/cerramaximiliano/cr-pi-countries/assets/65555679/a5760768-974a-42d1-af94-60087001a3df" width="100">
-<img src="https://github.com/cerramaximiliano/cr-pi-countries/assets/65555679/d09d1d18-ad88-427b-ab66-aafb380b7a3f" width="100">
-<img src="https://github.com/cerramaximiliano/cr-pi-countries/assets/65555679/b05fe861-1dfd-4fa5-be04-845b252f7e8f" width="100">
-<img src="https://github.com/cerramaximiliano/cr-pi-countries/assets/65555679/4acd46af-58a8-43b7-bf6b-f1f153c5bec2" width="100">
-<img src="https://github.com/cerramaximiliano/cr-pi-countries/assets/65555679/4b007a4f-874f-414d-948f-87af4b8f0e5e" width="100">
-<img src="https://github.com/cerramaximiliano/cr-pi-countries/assets/65555679/74f1d36e-eca7-4e03-9554-6f1543ef147d" width="100">
-<img src="https://github.com/cerramaximiliano/cr-pi-countries/assets/65555679/d1ae79f9-0632-46b9-9a7b-e7b92d8bf367" width="100">	
-<img src="https://github.com/cerramaximiliano/cr-pi-countries/assets/65555679/570ebe91-ead6-4935-b46e-79e1462abb21" width="100">
+<img src="https://github.com/cerramaximiliano/cr-pi-countries/assets/65555679/a5760768-974a-42d1-af94-60087001a3df" width="90">
+<img src="https://github.com/cerramaximiliano/cr-pi-countries/assets/65555679/d09d1d18-ad88-427b-ab66-aafb380b7a3f" width="90">
+<img src="https://github.com/cerramaximiliano/cr-pi-countries/assets/65555679/b05fe861-1dfd-4fa5-be04-845b252f7e8f" width="90">
+<img src="https://github.com/cerramaximiliano/cr-pi-countries/assets/65555679/4acd46af-58a8-43b7-bf6b-f1f153c5bec2" width="90">
+<img src="https://github.com/cerramaximiliano/cr-pi-countries/assets/65555679/4b007a4f-874f-414d-948f-87af4b8f0e5e" width="90">
+<img src="https://github.com/cerramaximiliano/cr-pi-countries/assets/65555679/74f1d36e-eca7-4e03-9554-6f1543ef147d" width="90">
+<img src="https://github.com/cerramaximiliano/cr-pi-countries/assets/65555679/d1ae79f9-0632-46b9-9a7b-e7b92d8bf367" width="90">	
+<img src="https://github.com/cerramaximiliano/cr-pi-countries/assets/65555679/570ebe91-ead6-4935-b46e-79e1462abb21" width="90">
 </div>
 
 ## **📌 OBJETIVOS**
